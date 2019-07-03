@@ -8,7 +8,7 @@ public class WhenUserCheckPageTitle extends CommonSteps{
 	String title = null;
 	
 	@Ignore
-	public void LearnAbout1() {
+	public void should_see_that_correct_web_page_title () {
 		insertWebPage();
 		searchWebPage();
 		title = get_Title();
@@ -16,7 +16,7 @@ public class WhenUserCheckPageTitle extends CommonSteps{
 		assertThat(title).isEqualTo("selenium viet nam ad duck duck go");
 	}
 	@Test
-	public void LearnAbout2() {
+	public void should_see_that_incorrect_web_page_title () {
 		insertWebPage();
 		searchWebPage();
 		title = get_Title();
@@ -24,7 +24,7 @@ public class WhenUserCheckPageTitle extends CommonSteps{
 		assertThat(title).isNotEqualTo("selenium at DuckDuckGo");
 	}
 	@Ignore
-	public void LearnAbout3() {
+	public void should_see_that_web_page_title_contains_expectation () {
 		insertWebPage();
 		searchWebPage();
 		title=get_Title();
